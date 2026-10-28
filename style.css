@@ -531,7 +531,8 @@ footer {
   font-size: 0.9rem;
 }
 
-@media (max-width: 760px) {
+/* Hide the name in the menu bar once the links run out of room. */
+@media (max-width: 900px) {
   .brand {
     display: none;
   }
@@ -540,6 +541,9 @@ footer {
     gap: 18px;
     width: 100%;
   }
+}
+
+@media (max-width: 760px) {
 
   .hero {
     padding: 40px 0;
