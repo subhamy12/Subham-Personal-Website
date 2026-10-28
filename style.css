@@ -331,6 +331,14 @@ h3 {
   padding-top: 8px;
 }
 
+.btn-demo {
+  align-self: flex-start;
+  margin-top: 8px;
+  background-color: var(--accent);
+  color: var(--surface);
+  font-size: 0.9rem;
+}
+
 .card-link {
   font-weight: 600;
   text-decoration: none;
@@ -502,11 +510,6 @@ h3 {
 }
 
 /* Contact */
-
-.contact-lede {
-  margin-bottom: 20px;
-  font-size: 1.05rem;
-}
 
 .contact-links {
   display: flex;

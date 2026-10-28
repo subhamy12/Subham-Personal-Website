@@ -1,0 +1,21 @@
+/* Bar linking the demo back to the main site. */
+.demo-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #19383e;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.demo-bar a {
+  color: #c6ebe1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.demo-bar a:hover {
+  text-decoration: underline;
+}

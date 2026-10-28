@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+ /* Use a clean, modern font-family and set default margins and padding */
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: #f0f9f0; /* Light green background for a fresh look */
+ color: #333; /* Default text color */
+}
+
+h1, h2 {
+ /* Center and add spacing for headers */
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+.App {
+ /* Center the main application container and add styling */
+ max-width: 900px; /* Restrict width for readability */
+ margin: 20px auto; /* Center the container */
+ padding: 20px;
+ background-color: #fff; /* White background for the content */
+ border-radius: 8px; /* Rounded corners for a modern design */
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Transaction Form */
+.transaction-container {
+ /* Add spacing below the transaction form */
+ margin-bottom: 30px;
+}
+
+form {
+ /* Arrange form elements flexibly */
+ display: flex;
+ flex-wrap: wrap; /* Allow elements to wrap to the next line */
+ gap: 20px; /* Space between elements */
+ justify-content: center; /* Center the form items */
+}
+
+.input-group {
+ /* Style input groups */
+ display: flex;
+ flex-direction: column; /* Stack label and input vertically */
+ align-items: center; /* Center align the input groups */
+ margin-bottom: 10px; /* Spacing between input groups */
+}
+
+label {
+ /* Bold labels for clarity */
+ font-weight: bold;
+ margin-bottom: 5px; /* Space between label and input */
+}
+
+input, select, button {
+ /* Style inputs, dropdowns, and buttons consistently */
+ width: 200px; /* Standard width for elements */
+ padding: 10px; /* Comfortable padding for usability */
+ border: 1px solid #ccc; /* Light gray border */
+ border-radius: 4px; /* Rounded corners */
+ font-size: 16px; /* Easy-to-read font size */
+}
+
+button {
+ /* Style for buttons */
+ cursor: pointer; /* Show pointer cursor on hover */
+ background-color: #28a745; /* Green background */
+ color: white; /* White text */
+ border: none; /* Remove default border */
+ transition: background-color 0.3s; /* Smooth hover effect */
+ margin-top: 27px; /* Adjust alignment */
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+button:hover {
+ /* Darker green on hover for feedback */
+ background-color: #218838;
+}
+
+/* Balance */
+h2 {
+ /* Style for balance section */
+ margin: 20px 0;
+ font-size: 24px; /* Larger font size for importance */
+ text-align: center;
+ color: #28a745; /* Green color for positive feedback */
+}
+
+/* Filter Section */
+.filter-container {
+ /* Add spacing and center alignment for filter section */
+ margin: 30px 0;
+ text-align: center;
+}
+
+.filter-container select,
+.filter-container input,
+.filter-container button {
+ /* Style filter inputs */
+ margin: 0 10px; /* Spacing between elements */
+ width: 200px;
+ padding: 10px;
+ font-size: 16px;
+}
+
+/* Transaction History */
+.transaction-history-container {
+ /* Add spacing above the transaction table */
+ margin-top: 30px;
+}
+
+.table-container {
+ /* Restrict table height for better scrolling */
+ height: 400px;
+}
+
+.MuiDataGrid-root {
+ /* Style the data grid */
+ background-color: #f9fff9; /* Light green background */
+ border: 1px solid #ddd; /* Light border */
+ border-radius: 4px; /* Rounded corners */
+}
+
+.balance {
+ /* Specific styling for the balance text */
+ font-size: 27px; /* Larger font for prominence */
+}
+
+.dateInputs {
+ /* Style date input fields */
+ margin-top: 10px;
+}
+
+.datagridbutton {
+ /* Style action buttons inside the data grid */
+ size: 40px;
+ margin-right: 4px;
+ margin-left: 4px;
+ padding: 2px; /* Smaller padding for compact buttons */
+ width: 50px; /* Standard width for consistency */
+ font-size: 12px; /* Smaller font for compact design */
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+
+.summary-container {
+ /* Center the summary section */
+ text-align: center;
+}
