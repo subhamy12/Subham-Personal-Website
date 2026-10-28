@@ -554,14 +554,10 @@ code {
   border-radius: 10px;
 }
 
-.photo figcaption {
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 0.875rem;
-}
-
-.footnote {
-  text-align: center;
+.shortcuts {
+  flex-basis: 100%;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
   color: var(--muted);
   font-size: 0.85rem;
 }
@@ -592,7 +588,8 @@ kbd {
     width: 100%;
   }
 
-  .footnote {
+  /* Phones have no keyboard shortcuts to show. */
+  .shortcuts {
     display: none;
   }
 }
