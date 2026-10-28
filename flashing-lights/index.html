@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashing Lights Metronome | Simulator</title>
+  <meta name="description" content="An in-browser simulator of Subham Yadav's Arduino Flashing Lights Metronome, running the same logic as the original sketch." />
+  <link rel="icon" href="../favicon-best.ico" />
+  <script>
+    // Apply the theme saved by the main site before the page paints.
+    try {
+      const theme = localStorage.getItem("theme");
+      if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-bar">
+    <a href="../#projects">← Back to subhamyadav.com</a>
+    <span>Arduino simulator · runs the original sketch's logic</span>
+  </div>
+
+  <main class="page">
+    <header class="page-header">
+      <div>
+        <h1>Flashing Lights <span>Metronome</span></h1>
+        <p>Four LEDs on pins 3, 5, 7 and 9, driven by the same code as the real board.</p>
+      </div>
+      <button class="icon-btn theme-btn" type="button" aria-label="Switch theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </header>
+
+    <section class="card controls" aria-label="Controls">
+      <div class="segmented" role="radiogroup" aria-label="Mode">
+        <button type="button" role="radio" data-mode="flashing" aria-checked="true">Flashing lights</button>
+        <button type="button" role="radio" data-mode="metronome" aria-checked="false">Metronome</button>
+      </div>
+
+      <div class="buttons">
+        <button type="button" class="btn btn-primary" id="run">Pause</button>
+        <button type="button" class="btn btn-ghost" id="reset">Reset</button>
+      </div>
+
+      <div class="speed" role="group" aria-label="Speed">
+        <span>Speed</span>
+        <button type="button" data-speed="0.25">¼×</button>
+        <button type="button" data-speed="0.5">½×</button>
+        <button type="button" data-speed="1" class="active">1×</button>
+        <button type="button" data-speed="2">2×</button>
+      </div>
+    </section>
+
+    <section class="board" aria-label="LED board">
+      <div class="board-label">
+        <span class="chip-dot"></span>
+        <span id="board-status">Running</span>
+      </div>
+      <div class="leds">
+        <div class="led-slot">
+          <div class="led" style="--led: #ff4d4d" data-led="0"><span class="sr-only">LED on pin 3</span></div>
+          <div class="leg"></div>
+          <strong>Pin 3</strong>
+          <small class="led-note" data-note="0"></small>
+        </div>
+        <div class="led-slot">
+          <div class="led" style="--led: #ffc93c" data-led="1"><span class="sr-only">LED on pin 5</span></div>
+          <div class="leg"></div>
+          <strong>Pin 5</strong>
+          <small class="led-note" data-note="1"></small>
+        </div>
+        <div class="led-slot">
+          <div class="led" style="--led: #3ddc84" data-led="2"><span class="sr-only">LED on pin 7</span></div>
+          <div class="leg"></div>
+          <strong>Pin 7</strong>
+          <small class="led-note" data-note="2"></small>
+        </div>
+        <div class="led-slot">
+          <div class="led" style="--led: #4da3ff" data-led="3"><span class="sr-only">LED on pin 9</span></div>
+          <div class="leg"></div>
+          <strong>Pin 9</strong>
+          <small class="led-note" data-note="3"></small>
+        </div>
+      </div>
+
+      <div class="beat" id="beat" aria-label="Metronome count">
+        <span>count</span>
+        <ol>
+          <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+        </ol>
+        <span id="double-count">doubleCount = true</span>
+      </div>
+    </section>
+
+    <section class="readouts" aria-label="Sketch variables">
+      <div class="card readout"><span>millis()</span><strong id="millis">0</strong></div>
+      <div class="card readout"><span>count</span><strong id="count">0</strong></div>
+      <div class="card readout"><span>LEDs on</span><strong id="on-count">0 / 4</strong></div>
+      <div class="card readout"><span>Mode</span><strong id="mode-name">Flashing</strong></div>
+    </section>
+
+    <section class="card how">
+      <h2>How it works</h2>
+      <p id="how-text"></p>
+    </section>
+
+    <section class="card code-card">
+      <div class="code-head">
+        <h2>The sketch</h2>
+        <a class="btn btn-ghost btn-small" href="Flashing-Lights_Metronome.ino" download>Download .ino</a>
+      </div>
+      <p class="muted">The part of <code>loop()</code> that isn't running in this mode is dimmed.</p>
+      <pre class="code" id="code" tabindex="0"><code>Loading…</code></pre>
+    </section>
+
+    <p class="footnote">
+      Keyboard: <kbd>Space</kbd> run/pause · <kbd>R</kbd> reset · <kbd>M</kbd> switch mode
+    </p>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
