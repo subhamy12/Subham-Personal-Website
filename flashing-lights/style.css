@@ -249,6 +249,7 @@ a:focus-visible,
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -286,7 +287,6 @@ a:focus-visible,
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-left: auto;
   color: var(--muted);
   font-size: 0.875rem;
   font-weight: 600;
@@ -547,6 +547,10 @@ code {
   margin: 0;
 }
 
+.photo h2 {
+  text-align: center;
+}
+
 .photo img {
   display: block;
   width: 100%;
@@ -556,6 +560,7 @@ code {
 
 .shortcuts {
   flex-basis: 100%;
+  text-align: center;
   padding-top: 12px;
   border-top: 1px solid var(--border);
   color: var(--muted);
@@ -574,10 +579,6 @@ kbd {
 @media (max-width: 640px) {
   .readouts {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .speed {
-    margin-left: 0;
   }
 
   .controls {
