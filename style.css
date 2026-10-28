@@ -10,10 +10,12 @@
   --hero-bg: #19383e;
   --hero-text: #ffffff;
   --shadow: 0 4px 16px rgba(25, 56, 62, 0.08);
+  color-scheme: light;
 }
 
+/* Dark theme: follows the device unless the visitor picks one with the toggle. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #0f1c1e;
     --surface: #172a2d;
     --text: #e4efed;
@@ -24,7 +26,22 @@
     --accent-soft: #1f3a3a;
     --hero-bg: #0b1517;
     --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f1c1e;
+  --surface: #172a2d;
+  --text: #e4efed;
+  --muted: #9db3b0;
+  --border: #26403f;
+  --accent: #6cc3b9;
+  --accent-strong: #c6ebe1;
+  --accent-soft: #1f3a3a;
+  --hero-bg: #0b1517;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  color-scheme: dark;
 }
 
 * {
@@ -113,6 +130,52 @@ a {
 .nav-links a:hover,
 .nav-links a:focus-visible {
   color: #c6ebe1;
+}
+
+.theme-toggle {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  border-color: #c6ebe1;
+  color: #c6ebe1;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon-sun {
+    display: block;
+  }
+
+  :root:not([data-theme="light"]) .theme-toggle .icon-moon {
+    display: none;
+  }
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
 }
 
 /* Hero */
