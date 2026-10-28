@@ -135,7 +135,7 @@ export default function App() {
       </div>
 
       <footer className="app-footer">
-        Built by Subham Yadav, Sumedha Balwadgi and Adhyaksh Chandrasekaran · Data is saved only in this browser
+        Built by Subham Yadav, Sumedha Balwadgi and Adhyaksha Chandrasekaran · Data is saved only in this browser
       </footer>
 
       <Toast toast={toast} onClose={closeToast} />
