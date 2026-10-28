@@ -543,6 +543,23 @@ code {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
+.photo {
+  margin: 0;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.photo figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
 .footnote {
   text-align: center;
   color: var(--muted);
