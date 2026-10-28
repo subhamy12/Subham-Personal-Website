@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UKNIGHTed Finance | Demo</title>
-    <meta name="description" content="Live demo of UKNIGHTed Finance, a student budgeting app built with React." />
+    <meta name="description" content="Live demo of UKNIGHTed Finance, a student budgeting app built with React and Recharts." />
     <link rel="icon" href="../favicon-best.ico" />
+    <script>
+      // Apply the theme saved by the main site before the page paints.
+      try {
+        const theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div class="demo-bar">
       <a href="../#projects">← Back to subhamyadav.com</a>
-      <span>Demo: sample data, nothing is saved</span>
+      <span>Live demo · your changes stay in this browser</span>
     </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
