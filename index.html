@@ -1,110 +1,303 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Shubham's Personal Site</title>
-  <link rel="stylesheet" type="text/css" href="CSS/style.css">
-  <link rel="icon" href="favicon-best.ico">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subham Yadav | Computer Science Student</title>
+  <meta name="description" content="Subham Yadav is a computer science student at ASU's Barrett, The Honors College, a National Merit Semifinalist, and an FBLA state medalist in mobile app development." />
+  <meta name="author" content="Subham Yadav" />
+  <link rel="canonical" href="https://subhamyadav.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Subham Yadav | Computer Science Student" />
+  <meta property="og:description" content="CS student at ASU Barrett. Software, app design, and cybersecurity." />
+  <meta property="og:url" content="https://subhamyadav.com/" />
+  <meta property="og:image" content="https://subhamyadav.com/subham-photo.jpg" />
+  <meta name="theme-color" content="#19383e" />
+  <link rel="icon" href="favicon-best.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <table cellspacing="20">
-    <tr>
-      <td><img class="circular" height="300" width="205" src="Subham.jpeg" alt="shubham yadav picture"></td>
-      <td>
-        <h1>Shubham Yadav</h1>
-        <p><em>Sixth grader of <strong>ACP</strong></em></p>
-        <p>I am a sixth grader (going to seventh grade) who goes to ACP. I love<br>
-          math, coding, and soccer. I can also make my very
-          <br>own beginner websites.</p>
-      </td>
-    </tr>
-  </table>
-  <hr>
-  <h3>Education</h3>
-  <ul>
-    <li><a href="https://www.facebook.com/kyrenedelamariposa/">Mariposa Elementray</a></li>
-    <li><a href="https://bbschl.com/">Bright Beginnings School</a></li>
-    <li><a href="https://sonoranschools.org/paragon">Paragon Science Academy</a></li>
-    <li><a href="https://bbschl.com/">Bright Beginnings School</a></li>
-    <li><a href="https://bbschl.com/">Bright Beginnings School</a></li>
-    <li><a href="https://www.cusd80.com/ACPOakland">Arizona College Preparatory</a></li>
-  </ul>
-  <hr>
-  <h3>Past Learning</h3>
-  <table cellspacing="10">
-    <thead>
-      <tr>
-        <th>Dates</th>
-        <th>Work</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>2014-2015</td>
-        <td>1st grade</td>
-      </tr>
-      <tr>
-        <td>2015-2016</td>
-        <td>2nd grade</td>
-      </tr>
-      <tr>
-        <td>2016-2017</td>
-        <td>3rd grade</td>
-      </tr>
-      <tr>
-        <td>2017-2018</td>
-        <td>4th grade</td>
-      </tr>
-      <tr>
-        <td>2018-2019</td>
-        <td>5th grade</td>
-      </tr>
-      <td>2019-2020</td>
-      <td>6th grade</td>
-      <tr>
-        <td>2020</td>
-        <td>Wrestling</td>
-      </tr>
-      <tr>
-        <td>2019</td>
-        <td>Movie Making</td>
-      </tr>
-    </tbody>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  </table>
-  <hr>
-  <h3>Skills</h3>
-  <table cellspacing="10">
-    <tr>
-      <td>IOS Development</td>
-      <td>⭐️⭐️⭐️</td>
-    </tr>
-    <tr>
-      <td>Web Development</td>
-      <td>⭐️⭐️⭐️⭐️</td>
-    </tr>
-    <tr>
-      <td>Math</td>
-      <td>⭐️⭐️⭐️⭐️⭐️</td>
-    </tr>
-    <tr>
-      <td>Science</td>
-      <td>⭐️⭐️⭐️⭐️⭐️</td>
-    </tr>
-    <tr>
-      <td>English</td>
-      <td>⭐️⭐️⭐️⭐️</td>
-    </tr>
-    <tr>
-      <td>Social Studies</td>
-      <td>⭐️⭐️⭐️.5⭐️</td>
-    </tr>
-  </table>
-  <hr>
-  <a href="my-hobbies.html">My Hobbies</a>
-  <br>
-  <br>
-  <a href="contact-me.html">Contact Me</a>
+  <nav class="navbar" aria-label="Main">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Subham Yadav</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Computer Science · ASU Barrett, The Honors College</p>
+        <h1>Hi, I'm Subham.</h1>
+        <p class="lede">This is my website!</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">See my work</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>National Merit</strong><span>Semifinalist</span></li>
+          <li><strong>FBLA-IT</strong><span>Chapter President</span></li>
+        </ul>
+      </div>
+      <img class="hero-photo" src="subham-photo.jpg" width="770" height="1000"
+           alt="Portrait of Subham Yadav in a suit and tie" />
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="about" class="container">
+      <h2>About Me</h2>
+      <div class="prose">
+        <p>
+          I'm a first-year computer science student at Arizona State University's Barrett,
+          The Honors College, and a 2026 graduate of Arizona College Preparatory High School.
+        </p>
+        <p>
+          I love programming fun little things and learning new stuff! Below you can see some of the things I've made (more on the way).
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="container">
+      <h2>Projects</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>UKNIGHTed Finance</h3>
+          <p>
+            A student budgeting app for logging deposits and withdrawals, editing and filtering
+            transactions by date, amount or category, charting spending by category, and generating
+            income and expense summaries for any date range.
+          </p>
+          <ul class="tags"><li>React</li><li>MUI Data Grid</li><li>Recharts</li><li>Team of 3</li></ul>
+        </article>
+        <article class="card">
+          <h3>Flashing Lights / Metronome</h3>
+          <p>
+            A free-time Arduino project that drives four LEDs in two modes: each light blinking at
+            its own random rhythm, or a metronome that keeps a steady beat and lights up the other
+            LEDs in a repeating eight-count pattern.
+          </p>
+          <ul class="tags"><li>Arduino</li><li>C++</li><li>Electronics</li></ul>
+        </article>
+        <article class="card">
+          <h3>subhamyadav.com</h3>
+          <p>
+            This site! A collection of some of my projects and accomplishments.
+          </p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>Git</li></ul>
+          <a class="card-link" href="https://github.com/subhamy12/Subham-Personal-Website">View source on GitHub →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="achievements" class="container">
+      <h2>Achievements &amp; Certifications</h2>
+      <div class="carousel" data-interval="5000" aria-roledescription="carousel" aria-label="Achievements">
+        <div class="carousel-track" tabindex="0">
+          <article class="card">
+            <span class="badge">Honor</span>
+            <h3>National Merit Semifinalist</h3>
+            <p class="meta">National Merit Scholarship Program · 2025</p>
+            <p>Recognized among the top scorers in the state on the PSAT/NMSQT.</p>
+          </article>
+          <article class="card">
+            <span class="badge">Honor</span>
+            <h3>Senior Scholar Athlete of the Year</h3>
+            <p class="meta">Arizona College Prep ESPY Awards · 2026</p>
+            <p>Honored at the school's ESPY Awards for excellence in both academics and athletics.</p>
+          </article>
+          <article class="card">
+            <span class="badge">FBLA</span>
+            <h3>1st Place, Mobile Application Development</h3>
+            <p class="meta">FBLA Regionals</p>
+            <p>Took first place in the region for designing and presenting a mobile app.</p>
+          </article>
+          <article class="card">
+            <span class="badge">FBLA</span>
+            <h3>2nd Place, Network Infrastructure</h3>
+            <p class="meta">FBLA State Leadership Conference</p>
+            <p>Placed second in Arizona in networking concepts, design, and security.</p>
+          </article>
+          <article class="card">
+            <span class="badge">FBLA</span>
+            <h3>3rd Place, Mobile Application Development</h3>
+            <p class="meta">FBLA State Leadership Conference</p>
+            <p>Placed third in Arizona in mobile app design and development.</p>
+          </article>
+          <article class="card">
+            <span class="badge">FBLA</span>
+            <h3>4th Place, Journalism</h3>
+            <p class="meta">FBLA State Leadership Conference</p>
+            <p>Placed fourth in Arizona in journalism.</p>
+          </article>
+          <article class="card">
+            <span class="badge">Certification</span>
+            <h3>Google Cybersecurity Professional Certificate</h3>
+            <p class="meta">Coursera · January 2025</p>
+            <p>Completed eight courses covering Python, Linux, SQL, SIEM tools, intrusion detection, and network security.</p>
+            <a class="card-link" href="https://coursera.org/verify/professional-cert/V935XJ6U8YU5">Verify credential →</a>
+          </article>
+          <article class="card">
+            <span class="badge">Certification</span>
+            <h3>Software &amp; App Design Technical Skills Assessment</h3>
+            <p class="meta">Arizona CTE · April 2025</p>
+            <p>Scored 93%, with perfect marks in OOP, version control, debugging, and UI design. Earned the CTE Technical Skills Assessment Medal.</p>
+          </article>
+          <article class="card">
+            <span class="badge">Certification</span>
+            <h3>Arizona Cybersecurity Clinic</h3>
+            <p class="meta">University of Arizona · 2025</p>
+            <p>Completed the clinic and earned the Cybersecurity Risk and Vulnerability Assessment badge.</p>
+          </article>
+          <article class="card">
+            <span class="badge">Certification</span>
+            <h3>IT Specialist</h3>
+            <p class="meta">Certiport · 2025</p>
+            <p>Earned the IT Specialist Java badge and passed the IT Specialist test with a score of 878.</p>
+          </article>
+          <article class="card">
+            <span class="badge">Honor</span>
+            <h3>AP Scholar &amp; AP Capstone</h3>
+            <p class="meta">College Board</p>
+            <p>Earned 5s on AP CS Principles, CS A, Precalculus, Calculus BC, Physics C: Mechanics, Statistics, and U.S. Government.</p>
+          </article>
+          <article class="card">
+            <span class="badge">Honor</span>
+            <h3>Admitted to Purdue Computer Science</h3>
+            <p class="meta">Purdue University · 2026</p>
+            <p>Offered admission to Computer Science in Purdue's College of Science.</p>
+          </article>
+          <article class="card">
+            <span class="badge">FBLA</span>
+            <h3>11th Place, Computer Problem Solving</h3>
+            <p class="meta">FBLA Online Testing Tournament · 2025</p>
+            <p>Ranked 11th in computer problem solving.</p>
+          </article>
+          <article class="card">
+            <span class="badge">Honor</span>
+            <h3>CTE Software and Design Knight Award</h3>
+            <p class="meta">Arizona College Prep</p>
+            <p>Chapter award for software and app design.</p>
+          </article>
+          <article class="card">
+            <span class="badge">Honor</span>
+            <h3>Class of 2026 Academic Award</h3>
+            <p class="meta">Arizona College Prep · 9th–11th grade</p>
+            <p>Received the school's academic award three years in a row, along with the 4.0 GPA Award.</p>
+          </article>
+          <article class="card">
+            <span class="badge">Honor</span>
+            <h3>UNA-USA Merit Award, twice</h3>
+            <p class="meta">United Nations Association of the USA</p>
+            <p>Recognized for work on UN Global Goal 3 (Good Health and Well-Being) and Goal 4 (Quality Education).</p>
+          </article>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" type="button" data-dir="-1" aria-label="Previous achievements">‹</button>
+          <div class="carousel-dots" role="tablist" aria-label="Choose a page"></div>
+          <button class="carousel-btn" type="button" data-dir="1" aria-label="Next achievements">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership" class="container">
+      <h2>Leadership &amp; Service</h2>
+      <ol class="timeline">
+        <li>
+          <h3>President, FBLA-IT</h3>
+          <p class="meta">Arizona College Prep · Co-President in 11th grade, President in 12th</p>
+          <p>Helped restart the chapter and then led it: recruiting members, setting expectations, planning events, and competing.</p>
+        </li>
+        <li>
+          <h3>Co-Founder &amp; Vice President, Blueprint</h3>
+          <p class="meta">Arizona College Prep · 12th grade</p>
+          <p>Co-founded a club that finds hands-on, real-world opportunities in fields like engineering and medicine for members.</p>
+        </li>
+        <li>
+          <h3>Co-Leader, Perry Library Council</h3>
+          <p class="meta">Perry Library · 11th grade</p>
+          <p>Ran reading and culture programs for kids, including a country-of-the-day series and a Disney-themed haunted tour.</p>
+        </li>
+        <li>
+          <h3>Volunteer, Parkland Memory Care</h3>
+          <p class="meta">11th grade</p>
+          <p>Supported residents living with Alzheimer's and dementia with daily tasks, meals, morning readings, and events.</p>
+        </li>
+        <li>
+          <h3>Member: National Honor Society, Key Club, Model UN, Track &amp; Field</h3>
+          <p class="meta">100+ service hours, including Feed My Starving Children</p>
+          <p>Throws javelin, discus and shot put, and mentors new Model UN delegates and throwers.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="education" class="container">
+      <h2>Education</h2>
+      <ol class="timeline">
+        <li>
+          <h3>Arizona State University, Barrett, The Honors College</h3>
+          <p class="meta">Computer Science · 2026 – present</p>
+        </li>
+        <li>
+          <h3>Arizona College Preparatory High School</h3>
+          <p class="meta">Class of 2026</p>
+          <p>Took 16 AP courses, earning 5s on Calculus BC, Physics C: Mechanics, CS A, Statistics, and U.S. Government. Received the 4.0 GPA Award every year.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="skills" class="container">
+      <h2>Skills</h2>
+      <div class="skill-groups">
+        <div>
+          <h3>Languages</h3>
+          <ul class="tags"><li>Java</li><li>Python</li><li>JavaScript</li><li>HTML &amp; CSS</li><li>SQL</li><li>Arduino C++</li></ul>
+        </div>
+        <div>
+          <h3>Frameworks &amp; Tools</h3>
+          <ul class="tags"><li>React</li><li>Recharts</li><li>Git &amp; GitHub</li><li>Linux</li></ul>
+        </div>
+        <div>
+          <h3>Cybersecurity</h3>
+          <ul class="tags"><li>Risk &amp; vulnerability assessment</li><li>Network security</li><li>SIEM</li><li>Intrusion detection</li><li>Security automation with Python</li></ul>
+        </div>
+        <div>
+          <h3>Other</h3>
+          <ul class="tags"><li>OOP</li><li>Data structures</li><li>Debugging</li><li>UI design</li><li>Leadership</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <p class="contact-lede">I'm always happy to talk about projects, internships, or cybersecurity.</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:shubhamy4040@gmail.com">shubhamy4040@gmail.com</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/subham-yadav-b21125342/">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/subhamy12">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Subham Yadav</p>
+    </div>
+  </footer>
+
+  <script src="carousel.js" defer></script>
+</body>
 </html>
