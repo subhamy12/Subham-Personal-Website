@@ -109,8 +109,18 @@ export default function Charts({ transactions }) {
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--border)" />
               <XAxis dataKey="month" tickLine={false} axisLine={false} tick={{ fill: "var(--muted)", fontSize: 12 }} />
               <YAxis tickLine={false} axisLine={false} tick={{ fill: "var(--muted)", fontSize: 12 }} tickFormatter={(v) => `$${v}`} />
-              <Tooltip formatter={(v) => formatMoney(v)} contentStyle={tooltipStyle} cursor={{ fill: "var(--hover)" }} />
-              <Legend iconType="circle" wrapperStyle={{ fontSize: 13 }} />
+              <Tooltip
+                formatter={(v) => formatMoney(v)}
+                contentStyle={tooltipStyle}
+                cursor={{ fill: "var(--hover)" }}
+                itemSorter={(item) => (item.dataKey === "income" ? 0 : 1)}
+              />
+              {/* Income first; Recharts 3 otherwise sorts legend items alphabetically. */}
+              <Legend
+                iconType="circle"
+                wrapperStyle={{ fontSize: 13 }}
+                itemSorter={(item) => (item.dataKey === "income" ? 0 : 1)}
+              />
               <Bar dataKey="income" name="Income" fill="var(--positive)" radius={[4, 4, 0, 0]} isAnimationActive={false} />
               <Bar dataKey="expenses" name="Expenses" fill="var(--negative)" radius={[4, 4, 0, 0]} isAnimationActive={false} />
             </BarChart>

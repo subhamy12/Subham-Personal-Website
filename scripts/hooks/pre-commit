@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Rebuilds the UKNIGHTed Finance demo whenever a commit includes its source, so
+# uknighted-finance/ (the files the site serves) never lags behind the code.
+# Enabled with: git config core.hooksPath scripts/hooks
+set -euo pipefail
+
+if git diff --cached --name-only | grep -q '^projects/uknighted-finance/'; then
+  echo "pre-commit: rebuilding UKNIGHTed Finance..."
+  cd projects/uknighted-finance
+  [ -d node_modules ] || npm ci --no-audit --no-fund
+  npm run build --silent
+  cd ../..
+  git add -A uknighted-finance
+fi
